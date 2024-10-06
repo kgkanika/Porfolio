@@ -1,0 +1,270 @@
+@import url("https://fonts.google.com/specimen/DM+Sans"); 
+@import url("https://fonts.google.com/specimen/Source+Code+Pro?query=source+code");
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar nav{
+    padding: 45px 0;
+    padding-left: 30px;
+    
+}
+
+.sidebar nav li{
+    list-style: none;
+    font-size: 30px;
+    padding: 33px 0;
+}
+
+.sidebar nav li a{
+    text-decoration: none;
+    color: rgb(37, 35, 35);
+}
+
+.main{
+    /*background-color: yellow;*/
+    width: 90vw;
+    
+}
+
+.container{
+    display: flex;
+}
+.infoContainer{
+    /*background-color: #004040;*/
+    height: 58vh;
+    width: 80vw;
+    margin: 144px auto;
+    margin: flex;
+    justify-content: space-around;
+}
+
+.devInfo{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Source Code Pro';
+}
+
+ 
+.hello{
+    font-size: 3em;
+    
+}
+
+.name{
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.about{
+    font-size: 2.5em;
+}
+
+.moreabout{
+    font-size: 2em;
+    font-family: 'Fira Sans';
+    margin-top: 23px;
+
+}
+
+.buttons{
+    margin-top: 2.2em;
+    font-size: 16px;
+
+}
+
+.btn{
+    padding: 9px 14px;
+    border-radius: 22px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 21px;
+    margin: 3px 3px;
+    cursor: pointer;
+}
+
+.btn-sm{
+    font-size: 10px;
+    padding: 7px 13px;
+    margin: 10px 0;
+}
+
+.btn:hover{
+    background-color: white;
+    color: dodgerblue;
+}
+.devPic img{
+    height: 28vh;  
+}   
+
+.contactform{
+    font-family: 'Fira Sans';
+    padding: 0 34px;
+    margin: 50px 88px;
+
+}
+
+.contactform h1{
+    font-family: 'Source Code Pro'; 
+}
+
+.contactform form div{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input{
+    /*width: 26vw;*/
+    border-radius: 5px;
+    margin: 6px 0 0 0;
+    padding: 3px;
+}
+
+.contactform form{
+    margin: 0 40px;
+}
+
+#emailHelp{
+    font-size: 11px;
+    color: midnightblue;
+    margin: 0 5px;
+    padding: 3px 0 0 0;
+}
+
+#form-check{
+    flex-direction: row;
+}
+
+#form-check input{
+    width: 24px;
+    margin: 3px 0;
+}
+
+.blogItem{
+    margin: 20px;
+    font-family: 'Fira sans',sans-serif;
+}
+
+.blogContainer{
+    margin: 0px 88px;
+
+}
+
+h1{
+    font-family: 'Fira sans',sans-serif;
+    margin: 23px;
+}
+
+p{
+    font-family: 'Source Code Pro',monospace;
+}
+
+.intro{
+    margin: 88px;
+}
+
+.intro h2{
+    font-family: 'Fira sans',sans-serif;
+    margin: 12px;
+
+}
+
+.intro p{
+    font-family: 'Source Code Pro',monospace;
+    margin: 12px;
+}
+
+.skillcontainer{
+    padding: 12px;
+}
+
+.skill{
+    width: 265px;
+    height: 5px;
+    background-color: red;
+    border: 2px solid black;
+}
+
+.skillItem{
+    display: flex;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+}
+
+.hundered{
+    width: 265px;
+    background-color: blueviolet;
+}
+
+.fifty{
+    width: 125px;
+    background-color: aqua;
+}
+
+.t5{
+    width: 75px;
+    background-color: yellow;
+}
+
+/* Sidebar hidden (off-screen) state */
+.sidebar {
+    background-color: rgb(172, 164, 164);
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+    width: 250px;
+    position: absolute; /* Sidebar fixed, so it stays in place when scrolling */
+    top: 0;
+    left: 0;
+    transform: translateX(-250px); /* Hidden off the screen initially */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000; /* Ensure the sidebar is above the rest of the content */
+}
+
+/* Sidebar visible (on-screen) state */
+.sidebarGo {
+    transform: translateX(0); /* Slide in the sidebar */
+}
+
+/* Main content */
+.main {
+    margin-left: 0; /* Start the main content at 0, next to the sidebar */
+    padding: 20px; /* Add some padding for visual spacing */
+    transition: margin-left 0.3s ease-in-out; /* Smoothly shift content when sidebar opens */
+}
+
+/* Adjust the main content when the sidebar is open */
+.sidebarGo + .main {
+    margin-left: 250px; /* Push the main content to the right when the sidebar is open */
+}
+
+/* Hamburger and cross icons */
+.hamburger {
+    position: fixed; /* Fixed position, stays on the screen when scrolling */
+    top: 10px;
+    left: 10px;
+    z-index: 1100; /* Make sure it’s above the sidebar */
+}
+
+.ham, .cross {
+    cursor: pointer;
+}
+
+@media (max-width: 1615px) { 
+    .buttons{
+        font-size: 6px;
+    }
+    .devInfo{
+        font-size: 10px;
+    }
+    
+    .intro, .blogContainer, .contactform{
+        margin: 50px 8px;
+    } 
+}
